@@ -1,7 +1,8 @@
 version: '3.2'
 services:
   app:
-    image: redmine:3.4
+    build:
+      context: ./
     tty: true
     stdin_open: true
     ports:
@@ -9,6 +10,8 @@ services:
     volumes:
       - ./plugins:/usr/src/redmine/plugins
     environment:
+      RAILS_ENV: development
+      REDMINE_PLUGINS_MIGRATE: "true"
       REDMINE_DB_MYSQL: db
       REDMINE_DB_PASSWORD: redmine
       REDMINE_DB_DATABASE: redmine34
