@@ -8,7 +8,7 @@ services:
     ports:
       - 43034:3000
     volumes:
-      - ./plugins:/usr/src/redmine/plugins
+      - ./plugins:/usr/src/redmine/plugins:cached
     environment:
       RAILS_ENV: development
       REDMINE_PLUGINS_MIGRATE: "true"
