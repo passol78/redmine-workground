@@ -10,3 +10,6 @@ gem 'database_cleaner'
 gem 'rspec-rails'
 gem 'poltergeist'
 gem 'launchy'
+gem 'poltergeist'
+gem 'letter_opener'
+gem 'rubocop-no_keyword_args', git: 'https://github.com/agileware-jp/rubocop-no_keyword_args.git', require: false
