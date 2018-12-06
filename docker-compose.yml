@@ -7,6 +7,7 @@ services:
     stdin_open: true
     ports:
       - 43034:3000
+    user: "redmine:redmine"
     volumes:
       - ./plugins:/usr/src/redmine/plugins:cached
     environment:
